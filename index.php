@@ -14,12 +14,8 @@ $password = $_ENV['SMS_GATEWAY_PASSWORD'];
 
 $client = new Client($login, $password);
 
-// verification code
-// $code = rand(100000,999999);
-// $messageText = "Your verification code is: $code";
-
-$messageText = "Hello, this is a test message from Android SMS Gateway API.";
-$phone = "+923001234567";
+$messageText = "";
+$phone = "";
 
 $message = (new MessageBuilder($messageText, [$phone]))
     ->setSimNumber(1)
